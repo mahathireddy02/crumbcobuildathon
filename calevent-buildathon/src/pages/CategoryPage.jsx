@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent } from '@/components/ui/Card'
 import EventCard from '@/components/EventCard'
+import { getApiUrl } from '@/lib/utils'
 
 const categoryImages = {
   weddings: ['weddings/429baf18cbb66c62afa1fcb44918dd6e.jpg', 'weddings/images-2.jpg', 'wedding.jpg'],
@@ -115,7 +116,7 @@ const CategoryPage = () => {
   const { data: featuredEvents = [] } = useQuery({
     queryKey: ['featured-events', category],
     queryFn: async () => {
-      const response = await fetch(`http://localhost:5000/api/events?category=${category}&limit=6&sort=rating`)
+      const response = await fetch(`${getApiUrl()}/api/events?category=${category}&limit=6&sort=rating`)
       if (!response.ok) return []
       const data = await response.json()
       return data.success ? data.data.events : []
@@ -126,7 +127,7 @@ const CategoryPage = () => {
   const { data: topProviders = [] } = useQuery({
     queryKey: ['top-providers', category],
     queryFn: async () => {
-      const response = await fetch(`http://localhost:5000/api/provider?category=${category}&limit=4&verified=true`)
+      const response = await fetch(`${getApiUrl()}/api/provider?category=${category}&limit=4&verified=true`)
       if (!response.ok) return []
       const data = await response.json()
       return data.success ? data.data.providers : []

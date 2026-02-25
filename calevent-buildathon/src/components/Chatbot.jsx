@@ -7,6 +7,7 @@ import { Input } from '@/components/ui/Input'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '@/contexts/AuthContext'
 import './Chatbot.css'
+import { getApiUrl } from '@/lib/utils'
 
 const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -153,7 +154,7 @@ const Chatbot = () => {
     setIsTyping(true)
 
     try {
-      const response = await fetch('http://localhost:5000/api/chatbot/analyze-image', {
+      const response = await fetch(`${getApiUrl()}/api/chatbot/analyze-image`, {
         method: 'POST',
         body: formData
       })

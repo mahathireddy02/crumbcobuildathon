@@ -7,6 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card'
 import { Link } from 'react-router-dom'
 import { providersAPI, eventsAPI } from '../services/api'
 import toast from 'react-hot-toast'
+import { getApiUrl } from '@/lib/utils'
 
 const ProviderProfile = () => {
   const [isEditing, setIsEditing] = useState(false)
@@ -641,7 +642,7 @@ const FollowersSection = () => {
 
   const fetchFollowers = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/provider/followers', {
+      const response = await fetch(`${getApiUrl()}/api/provider/followers`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -707,7 +708,7 @@ const ReviewsSection = () => {
 
   const fetchReviews = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/provider/reviews', {
+      const response = await fetch(`${getApiUrl()}/api/provider/reviews`, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('token')}`
         }
@@ -881,7 +882,7 @@ const findMatchingProviders = async (features) => {
       rating: provider.rating || 4.5,
       reviews: provider.totalReviews || 0,
       location: provider.location?.city || 'India',
-      image: provider.profileImage ? `http://localhost:5000/${provider.profileImage.replace(/\\/g, '/')}` : null,
+      image: provider.profileImage ? `${getApiUrl()}/${provider.profileImage.replace(/\\/g, '/')}` : null,
       categories: provider.categories,
       price: '₹50,000 - ₹2,00,000' // Sample pricing
     }));

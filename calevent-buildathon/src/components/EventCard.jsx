@@ -26,13 +26,7 @@ const EventCard = ({ event, className = '' }) => {
         <Card className="overflow-hidden group cursor-pointer">
           <div className="relative aspect-video overflow-hidden">
             <img
-              src={
-                event.eventImage?.startsWith('http') 
-                  ? event.eventImage 
-                  : event.eventImage 
-                    ? `http://localhost:5000/${event.eventImage}` 
-                    : '/src/public/wedding.jpg'
-              }
+              src={getImageUrl(event.eventImage) || '/src/public/wedding.jpg'}
               alt={event.title}
               className={`w-full h-full object-cover transition-all duration-300 group-hover:scale-105 ${
                 imageLoaded ? 'opacity-100' : 'opacity-0'

@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query'
 import EventCard from '@/components/EventCard'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
+import { getApiUrl } from '@/lib/utils'
 
 const CategoryEvents = () => {
   const { type } = useParams()
@@ -77,7 +78,7 @@ const CategoryEvents = () => {
         sort: sortBy === 'price-low' ? 'price' : sortBy === 'price-high' ? '-price' : sortBy === 'rating' ? '-rating' : '-createdAt'
       })
       
-      const response = await fetch(`http://localhost:5000/api/events?${params}`)
+      const response = await fetch(`${getApiUrl()}/api/events?${params}`)
       if (!response.ok) return []
       const data = await response.json()
       const allEvents = data.success ? data.data.events : []

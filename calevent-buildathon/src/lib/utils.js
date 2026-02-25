@@ -59,5 +59,12 @@ export const getImageUrl = (imagePath) => {
   if (!imagePath) return '/placeholder-image.jpg'
   if (imagePath.startsWith('http')) return imagePath
   if (imagePath.startsWith('/')) return imagePath
-  return `/${imagePath}`
+  
+  // Get base URL from environment variable and remove /api suffix
+  const baseUrl = import.meta.env.VITE_API_BASE_URL?.replace('/api', '') || 'http://localhost:5000'
+  return `${baseUrl}/${imagePath}`
+}
+
+export const getApiUrl = () => {
+  return import.meta.env.VITE_API_BASE_URL?.replace('/api', '') || 'http://localhost:5000'
 }

@@ -7,7 +7,7 @@ import {
   ImageIcon, Play
 } from 'lucide-react'
 import { useQuery } from '@tanstack/react-query'
-import { formatPrice, formatDate, getImageUrl } from '@/lib/utils'
+import { formatPrice, formatDate, getImageUrl, getApiUrl } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
 import { Card, CardContent } from '@/components/ui/Card'
 import EventCard from '@/components/EventCard'
@@ -133,13 +133,7 @@ const EventDetails = () => {
             <div className="lg:col-span-3">
               <div className="aspect-video rounded-lg overflow-hidden relative group">
                 <img
-                  src={
-                    event?.eventImage?.startsWith('http') 
-                      ? event.eventImage 
-                      : event?.eventImage 
-                        ? `http://localhost:5000/${event.eventImage}` 
-                        : '/src/public/wedding.jpg'
-                  }
+                  src={getImageUrl(event?.eventImage) || '/src/public/wedding.jpg'}
                   alt={event?.title}
                   className="w-full h-full object-cover"
                 />
@@ -164,11 +158,7 @@ const EventDetails = () => {
                   }`}
                 >
                   <img
-                    src={
-                      event.eventImage?.startsWith('http') 
-                        ? event.eventImage 
-                        : `http://localhost:5000/${event.eventImage}`
-                    }
+                    src={getImageUrl(event.eventImage)}
                     alt={event.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform"
                   />
