@@ -30,10 +30,10 @@ const CategoryPage = () => {
       icon: '💒',
       color: 'from-black to-[#333f63]',
       subcategories: [
-        { name: 'Traditional Weddings', count: 0, image: '/src/public/people-8552338_1280.jpg' },
-        { name: 'Destination Weddings', count: 0, image: '/src/public/Ryan-360x290.jpg' },
-        { name: 'Beach Weddings', count: 0, image: '/src/public/pexels-gabby-k-5876695.jpg' },
-        { name: 'Garden Weddings', count: 0, image: '/src/public/Oyvind-with-bkgrd-785x1030.jpg' }
+        { name: 'Traditional Weddings', count: 0, image: '/people-8552338_1280.jpg' },
+        { name: 'Destination Weddings', count: 0, image: '/Ryan-360x290.jpg' },
+        { name: 'Beach Weddings', count: 0, image: '/pexels-gabby-k-5876695.jpg' },
+        { name: 'Garden Weddings', count: 0, image: '/Oyvind-with-bkgrd-785x1030.jpg' }
       ]
     },
     corporate: {
@@ -42,10 +42,10 @@ const CategoryPage = () => {
       icon: '🏢',
       color: 'from-black to-[#333f63]',
       subcategories: [
-        { name: 'Conferences', count: 0, image: '/src/public/people-8552338_1280.jpg' },
-        { name: 'Product Launches', count: 0, image: '/src/public/Ryan-360x290.jpg' },
-        { name: 'Team Building', count: 0, image: '/src/public/pexels-gabby-k-5876695.jpg' },
-        { name: 'Annual Meetings', count: 0, image: '/src/public/Oyvind-with-bkgrd-785x1030.jpg' }
+        { name: 'Conferences', count: 0, image: '/people-8552338_1280.jpg' },
+        { name: 'Product Launches', count: 0, image: '/Ryan-360x290.jpg' },
+        { name: 'Team Building', count: 0, image: '/pexels-gabby-k-5876695.jpg' },
+        { name: 'Annual Meetings', count: 0, image: '/Oyvind-with-bkgrd-785x1030.jpg' }
       ]
     },
     birthday: {
@@ -54,10 +54,10 @@ const CategoryPage = () => {
       icon: '🎂',
       color: 'from-black to-[#333f63]',
       subcategories: [
-        { name: 'Kids Birthday', count: 0, image: '/src/public/people-8552338_1280.jpg' },
-        { name: 'Adult Birthday', count: 0, image: '/src/public/Ryan-360x290.jpg' },
-        { name: 'Milestone Birthday', count: 0, image: '/src/public/pexels-gabby-k-5876695.jpg' },
-        { name: 'Surprise Parties', count: 0, image: '/src/public/Oyvind-with-bkgrd-785x1030.jpg' }
+        { name: 'Kids Birthday', count: 0, image: '/people-8552338_1280.jpg' },
+        { name: 'Adult Birthday', count: 0, image: '/Ryan-360x290.jpg' },
+        { name: 'Milestone Birthday', count: 0, image: '/pexels-gabby-k-5876695.jpg' },
+        { name: 'Surprise Parties', count: 0, image: '/Oyvind-with-bkgrd-785x1030.jpg' }
       ]
     },
     anniversary: {
@@ -66,10 +66,10 @@ const CategoryPage = () => {
       icon: '💕',
       color: 'from-black to-[#333f63]',
       subcategories: [
-        { name: 'Wedding Anniversary', count: 42, image: '/src/public/people-8552338_1280.jpg' },
-        { name: 'Company Anniversary', count: 18, image: '/src/public/Ryan-360x290.jpg' },
-        { name: 'Milestone Anniversary', count: 25, image: '/src/public/pexels-gabby-k-5876695.jpg' },
-        { name: 'Silver & Golden', count: 15, image: '/src/public/Oyvind-with-bkgrd-785x1030.jpg' }
+        { name: 'Wedding Anniversary', count: 42, image: '/people-8552338_1280.jpg' },
+        { name: 'Company Anniversary', count: 18, image: '/Ryan-360x290.jpg' },
+        { name: 'Milestone Anniversary', count: 25, image: '/pexels-gabby-k-5876695.jpg' },
+        { name: 'Silver & Golden', count: 15, image: '/Oyvind-with-bkgrd-785x1030.jpg' }
       ]
     },
     conferences: {
@@ -78,10 +78,10 @@ const CategoryPage = () => {
       icon: '🎤',
       color: 'from-black to-[#333f63]',
       subcategories: [
-        { name: 'Business Conference', count: 32, image: '/src/public/people-8552338_1280.jpg' },
-        { name: 'Tech Conference', count: 28, image: '/src/public/Ryan-360x290.jpg' },
-        { name: 'Medical Conference', count: 15, image: '/src/public/pexels-gabby-k-5876695.jpg' },
-        { name: 'Educational Summit', count: 22, image: '/src/public/Oyvind-with-bkgrd-785x1030.jpg' }
+        { name: 'Business Conference', count: 32, image: '/people-8552338_1280.jpg' },
+        { name: 'Tech Conference', count: 28, image: '/Ryan-360x290.jpg' },
+        { name: 'Medical Conference', count: 15, image: '/pexels-gabby-k-5876695.jpg' },
+        { name: 'Educational Summit', count: 22, image: '/Oyvind-with-bkgrd-785x1030.jpg' }
       ]
     },
     parties: {
@@ -90,10 +90,10 @@ const CategoryPage = () => {
       icon: '🎉',
       color: 'from-black to-[#333f63]',
       subcategories: [
-        { name: 'Theme Parties', count: 45, image: '/src/public/people-8552338_1280.jpg' },
-        { name: 'Pool Parties', count: 28, image: '/src/public/Ryan-360x290.jpg' },
-        { name: 'Cocktail Parties', count: 35, image: '/src/public/pexels-gabby-k-5876695.jpg' },
-        { name: 'Dance Parties', count: 38, image: '/src/public/Oyvind-with-bkgrd-785x1030.jpg' }
+        { name: 'Theme Parties', count: 45, image: '/people-8552338_1280.jpg' },
+        { name: 'Pool Parties', count: 28, image: '/Ryan-360x290.jpg' },
+        { name: 'Cocktail Parties', count: 35, image: '/pexels-gabby-k-5876695.jpg' },
+        { name: 'Dance Parties', count: 38, image: '/Oyvind-with-bkgrd-785x1030.jpg' }
       ]
     },
     weddings: {
@@ -102,10 +102,10 @@ const CategoryPage = () => {
       icon: '💒',
       color: 'from-black to-[#333f63]',
       subcategories: [
-        { name: 'Traditional Weddings', count: 45, image: '/src/public/people-8552338_1280.jpg' },
-        { name: 'Destination Weddings', count: 23, image: '/src/public/Ryan-360x290.jpg' },
-        { name: 'Beach Weddings', count: 18, image: '/src/public/pexels-gabby-k-5876695.jpg' },
-        { name: 'Garden Weddings', count: 32, image: '/src/public/Oyvind-with-bkgrd-785x1030.jpg' }
+        { name: 'Traditional Weddings', count: 45, image: '/people-8552338_1280.jpg' },
+        { name: 'Destination Weddings', count: 23, image: '/Ryan-360x290.jpg' },
+        { name: 'Beach Weddings', count: 18, image: '/pexels-gabby-k-5876695.jpg' },
+        { name: 'Garden Weddings', count: 32, image: '/Oyvind-with-bkgrd-785x1030.jpg' }
       ]
     }
   }

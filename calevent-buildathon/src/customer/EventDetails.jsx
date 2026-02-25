@@ -133,7 +133,7 @@ const EventDetails = () => {
             <div className="lg:col-span-3">
               <div className="aspect-video rounded-lg overflow-hidden relative group">
                 <img
-                  src={getImageUrl(event?.eventImage) || '/src/public/wedding.jpg'}
+                  src={getImageUrl(event?.eventImage) || '/wedding.jpg'}
                   alt={event?.title}
                   className="w-full h-full object-cover"
                 />
@@ -267,7 +267,7 @@ const EventDetails = () => {
                 <h2 className="text-xl font-semibold mb-4">Event Provider</h2>
                 <div className="flex items-start space-x-4">
                   <img
-                    src={event.providerId?.profileImage || '/src/public/Ryan-360x290.jpg'}
+                    src={event.providerId?.profileImage || '/Ryan-360x290.jpg'}
                     alt={event.providerId?.name || 'Provider'}
                     className="w-16 h-16 rounded-full object-cover"
                   />

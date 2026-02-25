@@ -26,14 +26,14 @@ const EventCard = ({ event, className = '' }) => {
         <Card className="overflow-hidden group cursor-pointer">
           <div className="relative aspect-video overflow-hidden">
             <img
-              src={getImageUrl(event.eventImage) || '/src/public/wedding.jpg'}
+              src={getImageUrl(event.eventImage) || '/wedding.jpg'}
               alt={event.title}
               className={`w-full h-full object-cover transition-all duration-300 group-hover:scale-105 ${
                 imageLoaded ? 'opacity-100' : 'opacity-0'
               }`}
               onLoad={() => setImageLoaded(true)}
               onError={(e) => {
-                e.target.src = '/src/public/wedding.jpg'
+                e.target.src = '/wedding.jpg'
               }}
             />
             {!imageLoaded && (
