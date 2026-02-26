@@ -178,6 +178,20 @@ const server = app.listen(PORT, () => {
 📚 API Documentation: http://localhost:${PORT}/
 🔗 Frontend URL: ${process.env.FRONTEND_URL}
   `);
+
+  // Self-ping to prevent Render sleep mode
+  if (process.env.NODE_ENV === 'production') {
+    const SELF_PING_INTERVAL = 5 * 60 * 1000; // 5 minutes
+    setInterval(async () => {
+      try {
+        const response = await fetch(`http://localhost:${PORT}/health`);
+        console.log(`Self-ping: ${response.ok ? '✓' : '✗'} at ${new Date().toISOString()}`);
+      } catch (error) {
+        console.error('Self-ping failed:', error.message);
+      }
+    }, SELF_PING_INTERVAL);
+    console.log('🔄 Self-ping enabled (every 5 minutes)');
+  }
 });
 
 // Graceful shutdown
